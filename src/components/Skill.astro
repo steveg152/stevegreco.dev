@@ -1,0 +1,13 @@
+---
+interface Props {
+  primary?: boolean;
+}
+
+const { primary } = Astro.props;
+---
+
+<span
+  class=`rounded-2xl px-2 py-1 mx-1 bg-slate-700 text-xs ${primary ? 'text-primary font-semibold' : 'text-slate-300'}`
+>
+  <slot />
+</span>

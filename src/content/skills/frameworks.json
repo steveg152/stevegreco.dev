@@ -1,0 +1,20 @@
+{
+  "title": "Framworks/Libraries",
+  "order": 2,
+  "items": [
+    { "title": "React", "primary": true },
+    { "title": "NextJS", "primary": true },
+    { "title": "NodeJS", "primary": true },
+    { "title": "Tailwind", "primary": true },
+    { "title": "Emotion", "primary": false },
+    { "title": "React-Query", "primary": true },
+    { "title": "React-Router", "primary": true },
+    { "title": "Styled-Components", "primary": false },
+    { "title": "Post-CSS", "primary": false },
+    { "title": "Vue", "primary": false },
+    { "title": "Vitest", "primary": true },
+    { "title": "Jest", "primary": false },
+    { "title": "React-Aria", "primary": false },
+    { "title": "Theme-UI", "primary": false }
+  ]
+}
