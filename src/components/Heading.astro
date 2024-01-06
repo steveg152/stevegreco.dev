@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string
+}
+
+const anim = {
+  old: {
+    name: 'fadeIn',
+    duration: '0.2s',
+    easing: 'linear',
+    fillMode: 'forwards',
+  },
+  new: {
+    name: 'fadeOut',
+    duration: '0.3s',
+    easing: 'linear',
+    fillMode: 'backwards',
+  },
+}
+
+const myFade = {
+  forwards: anim,
+  backwards: anim,
+}
+
+const { title } = Astro.props
+---
+
+<h4 class="text-2xl text-white font-semibold mb-2" transition:animate={myFade}>
+  {title}
+</h4>

@@ -11,6 +11,30 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
     --primary: hsl(43, 74%, 66%);
+    --rob-roy-50: #fdf9ed;
+    --rob-roy-100: #f7edce;
+    --rob-roy-200: #efda98;
+    --rob-roy-300: #e8c468;
+    --rob-roy-400: #e1ac3e;
+    --rob-roy-500: #d98f27;
+    --rob-roy-600: #c06d1f;
+    --rob-roy-700: #a0501d;
+    --rob-roy-800: #823f1e;
+    --rob-roy-900: #6b341c;
+    --rob-roy-950: #3d1a0b;
+
+    --blue-smoke-50: #f6f7f7;
+    --blue-smoke-100: #e0e7e3;
+    --blue-smoke-200: #c1cec7;
+    --blue-smoke-300: #9aaea4;
+    --blue-smoke-400: #7a9086;
+    --blue-smoke-500: #5b7168;
+    --blue-smoke-600: #475a52;
+    --blue-smoke-700: #3b4a43;
+    --blue-smoke-800: #323d38;
+    --blue-smoke-900: #2c3531;
+    --blue-smoke-950: #171c1a;
+
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -24,5 +48,9 @@
     --input: 240 5.9% 90%;
     --ring: 240 5% 64.9%;
     --radius: 0.5rem;
+  }
+
+  a {
+    cursor: pointer;
   }
 }

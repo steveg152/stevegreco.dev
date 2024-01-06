@@ -1,12 +1,12 @@
 ---
 interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 
-import { ViewTransitions } from "astro:transitions";
-import "../styles/base.css";
+import { ViewTransitions } from 'astro:transitions'
+import '../styles/base.css'
 ---
 
 <!doctype html>
@@ -15,15 +15,23 @@ import "../styles/base.css";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>
+      {title}
+    </title>
     <ViewTransitions />
   </head>
   <body>
-    <main class="max-w-7xl mx-12 xl:mx-auto min-h-screen mt-20">
+    <div>
+      <slot name="header" />
+    </div>
+    <div
+      class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
+      transition:animate="fade"
+    >
       <slot />
-    </main>
+    </div>
     <style is:global>
       :root {
         --accent: 136, 58, 234;
