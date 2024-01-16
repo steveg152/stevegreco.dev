@@ -21,6 +21,7 @@ const expCollection = defineCollection({
     title: z.string(),
     summary: z.string(),
     skills: z.array(z.string()),
+    moreInfo: z.boolean(),
   }),
   /* ... */
 })

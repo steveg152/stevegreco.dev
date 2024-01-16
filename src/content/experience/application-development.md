@@ -7,4 +7,5 @@ automated testing capabilities, participated in architecture
 reviews, and worked with stakeholders to ensure requirements were
 met."
 skills: ["React", "Typescript", "Javascript", "NodeJS", "React Query", "Tailwind"]
+moreInfo: false
 ---

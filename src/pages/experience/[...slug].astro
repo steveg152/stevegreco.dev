@@ -16,11 +16,10 @@ const { Content } = await entry.render()
 ---
 
 <Layout title={entry.data.title}>
-  <div class="mt-24 flex justify-center">
-    <h1 class="text-6xl text-white font-semibold mb-2">
+  <div class="mt-8 lg:mt-24 flex justify-center">
+    <h1 class="text-2xl lg:text-6xl text-white font-semibold mb-2">
       {entry.data.title}
     </h1>
-
-    <Content />
+    <!-- <Content /> -->
   </div>
 </Layout>

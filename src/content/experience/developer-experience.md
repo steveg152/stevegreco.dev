@@ -6,4 +6,5 @@ Github Copilot, and worked with Cyber Compliance team to implement
 security tools for Open Source package management using Sonatype
 Nexus Repository and Nexus IQ."
 skills: ["Azure DevOps"]
+moreInfo: false
 ---

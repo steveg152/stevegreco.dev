@@ -5,4 +5,5 @@ summary: 'Collaborated with designers to establish a consistent design system,
   component library, and implemented react-aria to ensure WCAG
   compliance.'
 skills: ['Storybook']
+moreInfo: false
 ---

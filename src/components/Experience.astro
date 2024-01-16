@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content'
+import Heading from './Heading.astro'
+import Link from './Link.astro'
+
+const exp = await getCollection('experience')
+---
+
+{
+  exp.map((skill) => (
+    <div class="py-4">
+      <Heading title={skill.data.title} />
+      <p class="text-slate-400 mb-4 text-sm">{skill.data.summary}</p>
+      {skill.data.moreInfo && (
+        <a
+          class="text-primary-300 text-sm lg:text-base"
+          href={'/experience/' + skill.slug}
+        >
+          Learn More
+        </a>
+        <Link slug={skill.slug}> Learn More </Link>
+      )}
+    </div>
+  ))
+}
