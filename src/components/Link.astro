@@ -1,0 +1,31 @@
+---
+interface Props {
+  slug: string
+  external?: boolean
+}
+
+const { slug, external }: Props = Astro.props
+---
+
+{
+  external && (
+    <a
+      class="text-primary-300 text-sm lg:text-base inline-block"
+      target="_blank"
+      href={slug}
+    >
+      <slot />
+    </a>
+  )
+}
+
+{
+  !external && (
+    <a
+      class="text-primary-300 text-sm lg:text-base inline-block"
+      href={'/experience/' + slug}
+    >
+      <slot />
+    </a>
+  )
+}
