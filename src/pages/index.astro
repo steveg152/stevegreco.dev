@@ -1,25 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { getCollection } from 'astro:content'
 import SocialLinks from '../components/SocialLinks.astro'
-import Heading from '../components/Heading.astro'
 import HeroLinks from '../components/HeroLinks.astro'
 import Link from '../components/Link.astro'
 import Experience from '../components/Experience.astro'
 ---
 
-<Layout title="Steve Greco - Software Engineer">
+<Layout title="Steve Greco - Senior Software Engineer">
   <div class="lg:flex lg:justify-between lg:gap-4">
     <header
       class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
     >
       <section class="mb-6">
-        <h1 class="text-6xl tracking-tight text-primary">Steve Greco</h1>
-        <h2 class="text-xl mt-4">Senior Software Engineer</h2>
+        <div class="flex justify-start items-center gap-4">
+          <img
+            src="/avatar.png"
+            class="h-16 w-16 lg:h-28 lg:w-28 rounded-full"
+            alt=""
+          />
+          <div>
+            <h1 class="text-3xl lg:text-6xl tracking-tight text-primary">
+              Steve Greco
+            </h1>
+            <h2 class="text-base lg:text-xl mt-1 lg:mt-2">
+              Senior Software Engineer
+            </h2>
+          </div>
+        </div>
         <p class="mt-4 text-slate-400">
           I am a software engineer with 11+ years of experience specializing in
-          front-end development. I have a passion for building beautiful,
-          accessible, and performant web applications.
+          front-end development, design systems and testing automation.
+        </p>
+        <p class="mt-4 text-slate-400">
+          Currently open to new oppourtunities and looking for my next
+          challenge.
         </p>
         <div class="mt-4">
           <SocialLinks />
@@ -27,11 +41,11 @@ import Experience from '../components/Experience.astro'
         <HeroLinks />
       </section>
     </header>
-    <main class="pt-24 lg:w-1/2 lg:py-24">
-      <section class="mb-8 scroll-mt-16 lg:mb-24 lg:scroll-mt-24">
+    <main class="pt-4 lg:pt-24 lg:w-1/2">
+      <section class="mb-8 scroll-mt-16 lg:mb-16 lg:scroll-mt-24">
         <h3 class="text-3xl font-bold sr-only">About Me</h3>
         <div class="mt-4">
-          <p class="mt-4 text-slate-400">
+          <p class="text-slate-400">
             I have been working at{' '}
             <a
               href="https://www.ussteel.com"
@@ -41,10 +55,10 @@ import Experience from '../components/Experience.astro'
             >
               United States Steel Corporation
             </a>{' '}
-             for 11 years as a Senior Software Engineer, primarily focusing on
-            front-end architecture and development. Over the course of my
-            career, I have worked with a variety of technologies and frameworks,
-            including React, Typescript, Vue and NodeJS.
+             for 11 years, most recently as an Architect/Staff Software
+            Engineer. Primarily I have focused on front-end architecture and
+            development, but I have worked with a variety of technologies and
+            frameworks, including React, Typescript, Vue and NodeJS.
           </p>
           <p class="mt-4 text-slate-400">
             I am also a strong advocate for testing automation, design systems
@@ -60,7 +74,6 @@ import Experience from '../components/Experience.astro'
         </div>
       </section>
       <section class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-        <!-- <h3 class="text-3xl font-bold">Experience</h3> -->
         <div class="mt-4">
           <Experience />
         </div>
