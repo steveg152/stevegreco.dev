@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily: {
+        steve: ['"Source Code Pro"', 'monospace'],
+      },
       colors: {
         primary: 'var(--rob-roy-300)',
         'primary-50': 'var(--rob-roy-50)',
