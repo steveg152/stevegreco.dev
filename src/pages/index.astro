@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content'
 import SocialLinks from '../components/SocialLinks.astro'
 import Heading from '../components/Heading.astro'
 import HeroLinks from '../components/HeroLinks.astro'
+import Link from '../components/Link.astro'
 import Experience from '../components/Experience.astro'
 ---
 
@@ -64,6 +65,23 @@ import Experience from '../components/Experience.astro'
           <Experience />
         </div>
       </section>
+      <footer>
+        <div
+          class="flex justify-center items-center py-2 mt-2 mb-12 text-slate-500 text-sm"
+        >
+          <p>
+            Built with <Link external slug="https://astro.build/">Astro</Link>
+             and deployed on <Link external slug="https://vercel.com/">
+              Vercel
+            </Link>, heavily inspired by <Link
+              external
+              slug="https://brittanychiang.com/"
+            >
+              Brittany Chiang.
+            </Link>
+          </p>
+        </div>
+      </footer>
     </main>
   </div>
 </Layout>
