@@ -1,25 +1,41 @@
 ---
-import { getCollection } from 'astro:content'
-import Heading from './Heading.astro'
-import Link from './Link.astro'
-
-const exp = await getCollection('experience')
+import JobEntry from './JobEntry.astro'
 ---
 
-{
-  exp.map((skill) => (
-    <div class="py-4">
-      <Heading title={skill.data.title} />
-      <p class="text-slate-400 mb-4 text-sm">{skill.data.summary}</p>
-      {skill.data.moreInfo && (
-        <a
-          class="text-primary-300 text-sm lg:text-base"
-          href={'/experience/' + skill.slug}
-        >
-          Learn More
-        </a>
-        <Link slug={skill.slug}> Learn More </Link>
-      )}
+<h2 class="text-xl">Experience</h2>
+<div class="flex flex-col h-full">
+  <div class="flex-1 overflow-y-auto">
+    <div class="grid gap-4 py-4 md:gap-8">
+      <JobEntry
+        date="Oct 2021 - Present"
+        title="Application Analyst II"
+        company="United States Steel Corporation"
+        description="Lead developer"
+      />
+      <JobEntry
+        date="Oct 2017 - October 2021"
+        title="Application Developer II"
+        company="United States Steel Corporation"
+        description="Lead developer"
+      />
+      <JobEntry
+        date="Oct 2015 - October 2017"
+        title="Application Developer I"
+        company="United States Steel Corporation"
+        description="Lead developer"
+      />
+      <JobEntry
+        date="June 2014 - Oct 2015"
+        title="Management Associate - Developer"
+        company="United States Steel Corporation"
+        description="Lead developer"
+      />
+      <JobEntry
+        date="Jan 2013 - June 2014"
+        title="Application Developer Co-op "
+        company="United States Steel Corporation"
+        description="Lead developer"
+      />
     </div>
-  ))
-}
+  </div>
+</div>
