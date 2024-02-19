@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Link from '../components/Link.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
+import Certifications from '../components/Certifications.astro'
 ---
 
 <Layout title="Steve Greco - Senior Software Engineer">
@@ -35,7 +36,7 @@ import Projects from '../components/Projects.astro'
       </section>
       <!-- <Image src="/public/Designer.png" height={400} width={400} alt="Steve" /> -->
     </div>
-    <main class="pt-4 lg:pt-20 lg:w-full">
+    <main class="pt-4 lg:w-full">
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <section
           id="experience"
@@ -48,6 +49,11 @@ import Projects from '../components/Projects.astro'
           class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         >
           <Projects />
+        </section>
+        <section
+          class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 col-span-1 lg:col-span-2"
+        >
+          <Certifications />
         </section>
       </div>
 
