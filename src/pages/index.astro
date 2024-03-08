@@ -4,6 +4,7 @@ import Link from '../components/Link.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
 import Certifications from '../components/Certifications.astro'
+import BlogList from '../components/BlogList.astro'
 ---
 
 <Layout title="Steve Greco - Senior Software Engineer">
@@ -37,16 +38,16 @@ import Certifications from '../components/Certifications.astro'
       <!-- <Image src="/public/Designer.png" height={400} width={400} alt="Steve" /> -->
     </div>
     <main class="pt-4 lg:w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="grid grid-cols-1 lg:grid-cols-5">
         <section
           id="experience"
-          class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24"
+          class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 lg:col-span-3"
         >
-          <Experience />
+          <BlogList />
         </section>
         <section
           id="projects"
-          class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+          class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 col-span-2"
         >
           <Projects />
         </section>
@@ -56,19 +57,6 @@ import Certifications from '../components/Certifications.astro'
           <Certifications />
         </section>
       </div>
-
-      <footer>
-        <div
-          class="flex justify-center items-center py-2 mt-2 mb-12 text-slate-500 text-sm"
-        >
-          <p>
-            Built with <Link external slug="https://astro.build/">Astro</Link>
-             and deployed on <Link external slug="https://vercel.com/">
-              Vercel.
-            </Link>
-          </p>
-        </div>
-      </footer>
     </main>
   </div>
 </Layout>

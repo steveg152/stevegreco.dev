@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        steve: ['"Source Code Pro"', 'monospace'],
+        custom: ['"Source Code Pro"', 'monospace'],
       },
       colors: {
         primary: 'var(--rob-roy-300)',
@@ -34,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

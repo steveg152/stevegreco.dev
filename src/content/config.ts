@@ -1,6 +1,18 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, z } from 'astro:content'
 
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.date(),
+      author: z.string(),
+      avatar: z.string(),
+      image: image(),
+    }),
+})
+
 const projectCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -14,4 +26,5 @@ const projectCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   projects: projectCollection,
+  blog: blogCollection,
 }

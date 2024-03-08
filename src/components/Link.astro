@@ -21,10 +21,7 @@ const { slug, external }: Props = Astro.props
 
 {
   !external && (
-    <a
-      class="text-primary-300 text-sm lg:text-base inline-block"
-      href={'/experience/' + slug}
-    >
+    <a class="text-primary-300 text-sm lg:text-base inline-block" href={slug}>
       <slot />
     </a>
   )

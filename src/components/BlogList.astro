@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+import { formatDate } from '../utils.js'
+
+const blog_posts = await getCollection('blog')
+
+const posts = blog_posts
+  .sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  })
+  .splice(0, 3)
+---
+
+<h2 class="text-xl">Blog</h2>
+<div class="grid grid-cols-1 gap-4 mt-4">
+  {
+    posts.map((post) => {
+      return (
+        <a class="w-full" href={'blog/' + post.slug}>
+          <div class="lg:flex justify-start gap-y-4 lg:gap-4 hover:bg-slate-800 p-4 rounded-md">
+            <Image
+              src={post.data.image}
+              class="w-full lg:w-1/4 mb-4 lg:mb-0 rounded-md border border-slate-600 shadow-md shadow-slate-700 object-cover"
+              alt="project screenshot"
+            />
+            <div class="w-full ">
+              <h3 class="text-lg text-primary">{post.data.title}</h3>
+              <p class="text-slate-400">{formatDate(post.data.date)}</p>
+            </div>
+          </div>
+        </a>
+      )
+    })
+  }
+</div>
