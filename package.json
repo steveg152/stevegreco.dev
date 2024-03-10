@@ -15,11 +15,13 @@
     "@astrojs/vercel": "^6.1.4",
     "@vercel/analytics": "^1.2.2",
     "astro": "^4.4.14",
+    "satori": "^0.10.13",
     "sharp": "^0.33.2",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.11.25",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.12.3"
   }
