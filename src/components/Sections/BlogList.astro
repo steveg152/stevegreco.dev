@@ -27,8 +27,12 @@ const posts = blog_posts
               transition:animate="fade"
             />
             <div class="w-full ">
-              <h3 class="text-lg text-primary">{post.data.title}</h3>
-              <p class="text-slate-400">{formatDate(post.data.date)}</p>
+              <p class="text-slate-400">
+                <span class="border-l-2 border-slate-500 pr-2" />
+                {formatDate(post.data.date)}
+              </p>
+              <h3 class="text-lg text-white">{post.data.title}</h3>
+              <span class="text-primary text-sm">Read Article </span>
             </div>
           </div>
         </a>

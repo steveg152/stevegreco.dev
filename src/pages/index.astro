@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro'
 import Projects from '@components/Sections/Projects.astro'
 import Certifications from '@components/Sections/Certifications.astro'
 import BlogList from '@components/Sections/BlogList.astro'
+import Button from '@components/Base/Button.astro'
+import Experience from '@components/Sections/Experience.astro'
 ---
 
 <Layout
@@ -30,33 +32,31 @@ import BlogList from '@components/Sections/BlogList.astro'
           </div>
         </div>
 
-        <a
-          class="px-4 py-3 text-lg rounded-md border border-primary bg-slate-900 text-primary hover:bg-primary hover:text-slate-900"
-          href="/Resume.pdf"
-          target="_blank">View Resume</a
-        >
+        <Button href="/Resume.pdf">Download Resume</Button>
       </section>
       <!-- <Image src="/public/Designer.png" height={400} width={400} alt="Steve" /> -->
     </div>
     <div class="pt-4 lg:w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-5">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
         <section
           id="blog"
           class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 lg:col-span-3"
         >
           <BlogList />
         </section>
-        <section
-          id="projects"
-          class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 col-span-2"
+        <div
+          class="grid grid-cols-1 col-span-1 md:col-span-2 gap-6 scroll-mt-16 lg:scroll-mt-24"
         >
-          <Projects />
-        </section>
-        <section
-          class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 col-span-1 lg:col-span-2"
-        >
-          <Certifications />
-        </section>
+          <section id="projects" class="">
+            <Experience />
+          </section>
+          <section id="projects" class="">
+            <Projects />
+          </section>
+          <section class="">
+            <Certifications />
+          </section>
+        </div>
       </div>
     </div>
   </div>
