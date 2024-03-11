@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Link from '../components/Link.astro'
-import Experience from '../components/Experience.astro'
-import Projects from '../components/Projects.astro'
-import Certifications from '../components/Certifications.astro'
-import BlogList from '../components/BlogList.astro'
+import Projects from '@components/Sections/Projects.astro'
+import Certifications from '@components/Sections/Certifications.astro'
+import BlogList from '@components/Sections/BlogList.astro'
+import Button from '@components/Base/Button.astro'
+import Experience from '@components/Sections/Experience.astro'
 ---
 
-<Layout title="Steve Greco - Senior Software Engineer">
+<Layout
+  title="Steve Greco - Senior Software Engineer"
+  description="I am a software engineer with 11+ years of experience specializing in front-end development, design systems and testing automation. Currently open to new opportunities and looking for my next challenge."
+>
   <div class="">
     <div
       class="flex lg:w-full lg:flex-col lg:justify-between lg:pt-28 lg:pb-16"
@@ -16,7 +19,7 @@ import BlogList from '../components/BlogList.astro'
         <div class="flex justify-start items-center gap-4">
           <div class="w-full lg:w-3/4">
             <h1 class="flex text-3xl lg:text-6xl tracking-tight text-white">
-              <span class="text-primary"><i></i></span> Stephen Greco
+              Stephen Greco
             </h1>
             <p class="mt-4 text-slate-400">
               I am a software engineer with 11+ years of experience specializing
@@ -29,34 +32,32 @@ import BlogList from '../components/BlogList.astro'
           </div>
         </div>
 
-        <a
-          class="px-4 py-3 text-lg rounded-md border border-primary bg-slate-900 text-primary hover:bg-primary hover:text-slate-900"
-          href="/Resume.pdf"
-          target="_blank">View Resume</a
-        >
+        <Button href="/Resume.pdf">Download Resume</Button>
       </section>
       <!-- <Image src="/public/Designer.png" height={400} width={400} alt="Steve" /> -->
     </div>
-    <main class="pt-4 lg:w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-5">
+    <div class="pt-4 lg:w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
         <section
-          id="experience"
+          id="blog"
           class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 lg:col-span-3"
         >
           <BlogList />
         </section>
-        <section
-          id="projects"
-          class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 col-span-2"
+        <div
+          class="grid grid-cols-1 col-span-1 md:col-span-2 gap-6 scroll-mt-16 lg:scroll-mt-24"
         >
-          <Projects />
-        </section>
-        <section
-          class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 col-span-1 lg:col-span-2"
-        >
-          <Certifications />
-        </section>
+          <section id="projects" class="">
+            <Experience />
+          </section>
+          <section id="projects" class="">
+            <Projects />
+          </section>
+          <section class="">
+            <Certifications />
+          </section>
+        </div>
       </div>
-    </main>
+    </div>
   </div>
 </Layout>

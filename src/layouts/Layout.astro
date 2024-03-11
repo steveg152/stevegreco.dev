@@ -1,69 +1,31 @@
 ---
-interface Props {
-  title: string
-  socialImage?: string
-}
-
-const { title, socialImage = './SocialImage.png' } = Astro.props
-
 import { ViewTransitions } from 'astro:transitions'
 import '../styles/base.css'
+import BaseHead from '../components/Base/BaseHead.astro'
+import Header from '../components/Base/Header.astro'
+import Footer from '../components/Base/Footer.astro'
+interface Props {
+  title: string
+  description: string
+  image?: string
+}
 
-import { Image } from 'astro:assets'
-import myLogo from '../../public/logo.svg'
-import SocialLinks from '../components/SocialLinks.astro'
-import MobileNavigation from '../components/MobileNavigation.astro'
-import NavButton from '../components/NavButton.astro'
-import Link from '../components/Link.astro'
+const { title, description, image } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en" class="bg-slate-900 text-slate-200 leading-relaxed font-custom">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Software Engineer with 11+ years of experience specializing in front-end development, design systems and testing automation."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content={socialImage} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>
-      {title}
-    </title>
+    <BaseHead title={title} description={description} image={image} />
     <ViewTransitions />
   </head>
   <body>
-    <div
-      class="flex lg:justify-between items-center mx-auto max-w-screen-xl px-6 h-28 z-50 bg-slate-900 w-full lg:sticky lg:top-0"
-    >
-      <NavButton />
-      <a href="/"> <Image src={myLogo} alt="Logo" height={60} width={225} /></a>
-
-      <span class="hidden lg:block"><SocialLinks /></span>
-    </div>
-    <MobileNavigation />
+    <Header />
     <div class="mx-auto max-w-screen-xl px-6 py-6 lg:py-0">
       <slot />
     </div>
 
-    <footer>
-      <div
-        class="flex-col items-center text-center justify-center py-2 mt-2 mb-4 text-slate-500 text-sm"
-      >
-        <p>
-          Built with <Link external slug="https://astro.build/">Astro</Link>
-          and deployed on <Link external slug="https://vercel.com/">
-            Vercel.
-          </Link>
-        </p>
-        <p class="text-center text-sm">
-          &copy; {new Date().getFullYear()}
-          <a href="https://www.stevegreco.dev">Stephen Greco</a>
-        </p>
-      </div>
-    </footer>
+    <Footer />
     <style is:global>
       :root {
         --accent: 136, 58, 234;
