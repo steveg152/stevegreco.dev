@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { title, description, image = '/SocialImage.png' } = Astro.props
+console.log(Astro.url)
 ---
 
 <!-- Global Metadata -->
@@ -28,7 +29,7 @@ const { title, description, image = '/SocialImage.png' } = Astro.props
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={new URL(image, Astro.url.origin)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
