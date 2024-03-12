@@ -1,17 +1,29 @@
 ---
-import myLogo from '../../../public/logo.svg'
+// import myLogo from '../../../public/logo.svg'
+import avatar from '../../../public/avatar.png'
 import { Image } from 'astro:assets'
 import NavButton from '@components/NavButton.astro'
 import SocialLinks from '@components/SocialLinks.astro'
 import MobileNavigation from './MobileNavigation.astro'
 ---
 
-<header>
+<header class="lg:sticky lg:top-0 bg-slate-900">
   <div
-    class="flex lg:justify-between items-center mx-auto max-w-screen-xl px-6 h-28 z-50 bg-slate-900 w-full lg:sticky lg:top-0"
+    class="flex lg:justify-between items-center mx-auto max-w-screen-xl px-6 h-20 z-50 bg-slate-900 w-full lg:sticky lg:top-0"
   >
     <NavButton />
-    <a href="/"> <Image src={myLogo} alt="Logo" height={60} width={225} /></a>
+    <a
+      class="flex justify-start items-center text-3xl gap-4 text-primary"
+      href="/"
+    >
+      <Image
+        class="rounded-full"
+        src={avatar}
+        alt="Logo"
+        height={60}
+        width={60}
+      />
+    </a>
     <span class="hidden lg:block"><SocialLinks /></span>
   </div>
   <MobileNavigation />

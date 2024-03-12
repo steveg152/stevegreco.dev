@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['"Source Code Pro"', 'monospace'],
+        custom: ['inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         primary: 'var(--rob-roy-300)',
