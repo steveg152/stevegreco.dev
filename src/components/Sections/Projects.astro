@@ -31,18 +31,19 @@ const projects = await getCollection('projects')
         return (
           <a
             class="w-full hover:bg-slate-800 rounded-lg p-4"
+            target="_blank"
             href={project.data.repo_url}
           >
             <div class="lg:flex justify-start gap-y-4 lg:gap-4">
               <div class="w-full">
-                <h3 class="text-primary">{project.data.title}</h3>
-                <p class="text-xs text-slate-400">{project.data.description}</p>
+                <h3 class="text-primary text-lg">{project.data.title}</h3>
+                <p class="text-sm text-slate-400">{project.data.description}</p>
                 <div class="mt-2 text-white flex gap-2 justify-between items-center">
                   <div class="flex gap-2">
                     <img class="h-6 w-6 " src={astroSVG.src} />
                     <img class="h-6 w-6 " src={tsSVG.src} />
                   </div>
-                  <div class="flex justify-start items-center gap-2 text-xs">
+                  <div class="flex justify-start items-center gap-2 text-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -70,6 +71,6 @@ const projects = await getCollection('projects')
         )
       })
     }
-    <span class="text-slate-400 text-xs">More projects coming soon...</span>
+    <span class="text-slate-400 text-sm">More projects coming soon...</span>
   </div>
 </div>
