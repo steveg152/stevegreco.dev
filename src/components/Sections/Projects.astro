@@ -40,8 +40,12 @@ const projects = await getCollection('projects')
                 <p class="text-sm text-slate-400">{project.data.description}</p>
                 <div class="mt-2 text-white flex gap-2 justify-between items-center">
                   <div class="flex gap-2">
-                    <img class="h-6 w-6 " src={astroSVG.src} />
-                    <img class="h-6 w-6 " src={tsSVG.src} />
+                    <img class="h-6 w-6 " src={astroSVG.src} alt="astro logo" />
+                    <img
+                      class="h-6 w-6 "
+                      src={tsSVG.src}
+                      alt="typescript logo"
+                    />
                   </div>
                   <div class="flex justify-start items-center gap-2 text-sm">
                     <svg

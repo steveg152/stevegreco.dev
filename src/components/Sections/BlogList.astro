@@ -20,6 +20,7 @@ const posts = blog_posts
         <a class="w-full" href={'blog/' + post.slug}>
           <div class="lg:flex justify-start gap-y-4 lg:gap-4 hover:bg-slate-800 p-4 rounded-md">
             <Image
+              loading="eager"
               src={post.data.image}
               class="w-full lg:w-1/4 mb-4 lg:mb-0 rounded-md border border-slate-600 shadow-md shadow-slate-700 object-cover"
               alt="project screenshot"
