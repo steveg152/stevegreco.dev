@@ -11,14 +11,14 @@
     "disable-toolbar": "astro preferences disable devToolbar"
   },
   "dependencies": {
-    "@astrojs/react": "^3.1.0",
+    "@astrojs/react": "^3.3.4",
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vercel": "^7.3.6",
+    "@astrojs/vercel": "^7.6.0",
     "@fontsource/inter": "^5.0.17",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@vercel/analytics": "^1.2.2",
-    "astro": "^4.5.2",
+    "astro": "^4.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "satori": "^0.10.13",
