@@ -11,24 +11,24 @@
     "disable-toolbar": "astro preferences disable devToolbar"
   },
   "dependencies": {
-    "@astrojs/react": "^3.6.0",
+    "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^7.7.2",
-    "@fontsource/inter": "^5.0.19",
+    "@fontsource/inter": "^5.0.20",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vercel/analytics": "^1.3.1",
-    "astro": "^4.11.5",
+    "astro": "^4.13.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "satori": "^0.10.14",
     "sharp": "^0.33.4",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.10"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "^20.14.10",
-    "prettier": "^3.3.2",
+    "@tailwindcss/typography": "^0.5.14",
+    "@types/node": "^20.14.15",
+    "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.12.3"
   }
 }
