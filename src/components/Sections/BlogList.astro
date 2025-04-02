@@ -18,22 +18,22 @@ const posts = blog_posts
     posts.map((post) => {
       return (
         <a class="w-full" href={'blog/' + post.slug}>
-          <div class="lg:flex justify-start gap-y-4 lg:gap-4 hover:bg-slate-800 p-4 rounded-md">
+          <div class="lg:flex justify-start gap-y-4 lg:gap-4 p-4 rounded-md">
             <Image
               loading="eager"
               src={post.data.image}
-              class="w-full lg:w-1/4 mb-4 lg:mb-0 rounded-md border border-slate-600 shadow-md shadow-slate-700 object-cover"
+              class="w-full lg:w-1/4 mb-4 lg:mb-0 rounded-md shadow-md shadow-slate-700 object-cover"
               alt="project screenshot"
               transition:name={`blog-${post.slug}`}
               transition:animate="fade"
             />
             <div class="w-full ">
-              <p class="text-slate-400">
-                <span class="border-l-2 border-slate-500 pr-2" />
+              <p class="">
+                <span class="border-l-2 border-primary pr-2" />
                 {formatDate(post.data.date)}
               </p>
-              <h3 class="text-lg text-white">{post.data.title}</h3>
-              <span class="text-primary text-sm">Read Article </span>
+              <h3 class="text-lg">{post.data.title}</h3>
+              <span class="text-sm">Read Article </span>
             </div>
           </div>
         </a>

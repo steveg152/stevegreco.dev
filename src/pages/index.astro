@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro'
 import Projects from '@components/Sections/Projects.astro'
 import Certifications from '@components/Sections/Certifications.astro'
 import BlogList from '@components/Sections/BlogList.astro'
-import Button from '@components/Base/Button.astro'
 import Experience from '@components/Sections/Experience.astro'
+import { LinkButton } from '@components/ui/link-button'
 ---
 
 <Layout
@@ -26,7 +26,7 @@ import Experience from '@components/Sections/Experience.astro'
           </div>
         </div>
 
-        <Button href="/Resume.pdf">Download Resume</Button>
+        <LinkButton />
       </section>
       <!-- <Image src="/public/Designer.png" height={400} width={400} alt="Steve" /> -->
     </div>

@@ -17,6 +17,21 @@ const { title, description, image = '/SocialImage.png' } = Astro.props
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
+<!-- Theme Initialization -->
+<script is:inline>
+  ;(function () {
+    const theme =
+      localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'theme-light')
+    const isDark =
+      theme === 'dark' ||
+      (theme === 'system' &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+  })()
+</script>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
