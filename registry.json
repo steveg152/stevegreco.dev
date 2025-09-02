@@ -4,13 +4,13 @@
   "homepage": "https://acme.com",
   "items": [
     {
-      "name": "Button",
-      "type": "registry:block",
+      "name": "LinkButton",
+      "type": "registry:component",
       "title": "Custom Button",
-      "description": "A simple button component.",
+      "description": "A simple link button component.",
       "files": [
         {
-          "path": "src/components/ui/button.tsx",
+          "path": "./src/registry/link-button/link-button.tsx",
           "type": "registry:component"
         }
       ]

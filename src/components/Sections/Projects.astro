@@ -1,19 +1,17 @@
 ---
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import astroSVG from '@assets/logos/astro.svg'
 import tsSVG from '@assets/logos/typescript-color.svg'
-import vercelSVG from '@assets/logos/vercel.svg'
 import { SquareCode, Code } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardTitle } from '@components/ui/card'
 
 const projects = await getCollection('projects')
 ---
 
-<div class="border border-slate-700/70 rounded-lg p-6">
-  <h2 class="text-lg inline-flex items-center gap-2">
+<Card className="border border-slate-700/70 rounded-lg p-6">
+  <CardTitle className="text-lg inline-flex items-center gap-2">
     <SquareCode /> Projects
-  </h2>
-  <div class="grid grid-cols-1 gap-4 mt-4">
+  </CardTitle>
+  <CardContent>
     {
       projects.map((project) => {
         return (
@@ -62,8 +60,10 @@ const projects = await getCollection('projects')
         )
       })
     }
-    <span class="text-muted-foreground text-sm"
-      >More projects coming soon...</span
-    >
-  </div>
-</div>
+    <CardFooter>
+      <span class="text-muted-foreground text-sm"
+        >More projects coming soon...</span
+      >
+    </CardFooter>
+  </CardContent>
+</Card>

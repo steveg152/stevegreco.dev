@@ -8,9 +8,9 @@ import MobileNavigation from './MobileNavigation.astro'
 import { ModeToggle } from '@components/ModeToggle'
 ---
 
-<header class="lg:sticky lg:top-0 bg-background">
+<header class="lg:sticky lg:top-0 bg-background z-[100] relative">
   <div
-    class="flex lg:justify-between items-center mx-auto max-w-screen-xl px-6 h-20 z-50 w-full lg:sticky lg:top-0"
+    class="flex lg:justify-between items-center mx-auto max-w-screen-xl px-6 h-20 z-[100] w-full lg:sticky lg:top-0"
   >
     <NavButton />
     <a class="flex justify-start items-center text-3xl gap-4" href="/">
