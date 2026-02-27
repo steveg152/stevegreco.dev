@@ -32,6 +32,10 @@ const { title, description, image = '/SocialImage.png' } = Astro.props
     document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
   }
   applyTheme()
+  document.addEventListener('astro:before-swap', function (ev) {
+    var isDark = document.documentElement.classList.contains('dark')
+    ev.newDocument.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+  })
   document.addEventListener('astro:after-swap', applyTheme)
 </script>
 
