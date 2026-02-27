@@ -2,12 +2,10 @@ import {
   Link as AriaLink,
   type LinkProps as AriaLinkProps,
 } from 'react-aria-components'
-import { buttonVariants } from './button'
-import type { VariantProps } from 'class-variance-authority'
-import { cn } from '@/lib/utils'
+import { buttonClassName, type ButtonVariantProps } from './button'
 
 export interface LinkProps
-  extends VariantProps<typeof buttonVariants>,
+  extends ButtonVariantProps,
     AriaLinkProps {}
 
 export function LinkButton({
@@ -20,7 +18,7 @@ export function LinkButton({
   return (
     <AriaLink
       {...props}
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={buttonClassName({ variant, size, className })}
     >
       {children}
     </AriaLink>

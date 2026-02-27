@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Design Tokens Showcase — Page-specific styles
+   Hardcoded colors so previews render independently of Tailwind purging.
+   ========================================================================== */
+
+/* Layout */
+.dt-page {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+@media (min-width: 768px) {
+  .dt-page {
+    padding: 4rem 1.5rem 6rem;
+  }
+}
+
+.dt-header {
+  margin-bottom: 3rem;
+}
+
+.dt-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .dt-header h1 {
+    font-size: 3rem;
+  }
+}
+
+.dt-header p {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+  color: #5b7168;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.dt-header code {
+  font-size: 0.75rem;
+  background: #efda98;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Sections */
+.dt-section {
+  margin-bottom: 3.5rem;
+}
+
+.dt-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+}
+
+/* Anchors */
+.dt-anchors {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dt-anchor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dt-anchor-swatch {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d4d3cd;
+  flex-shrink: 0;
+}
+
+/* Palettes */
+.dt-palettes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dt-palette h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dt-palette-row {
+  display: flex;
+  gap: 0;
+}
+
+.dt-palette-cell {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dt-swatch {
+  display: block;
+  width: 100%;
+  height: 5rem;
+}
+
+.dt-stop-label {
+  margin-top: 0.375rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  color: #5b7168;
+  text-align: center;
+}
+
+/* Token text styles */
+.dt-token-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.dt-token-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  color: #7a9086;
+}
+
+/* Table rows (spacing, type scales, etc.) */
+.dt-table {
+  border: 1px solid #d4d3cd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.dt-table-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid #efda98;
+}
+
+.dt-table-row:last-child {
+  border-bottom: none;
+}
+
+.dt-table-row--top {
+  align-items: flex-start;
+}
+
+.dt-col-name {
+  width: 9rem;
+  flex-shrink: 0;
+}
+
+.dt-col-value {
+  width: 5rem;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.dt-col-preview {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dt-leading-sample {
+  white-space: normal;
+  font-size: 0.875rem;
+  max-width: 32rem;
+}
+
+/* Spacing bar */
+.dt-spacing-bar {
+  display: block;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+  background-color: #475a52;
+}
+
+/* Visual row (radius, border width) */
+.dt-visual-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dt-visual-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Radius boxes — solid fill makes the shape obvious */
+.dt-radius-box {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: #475a52;
+}
+
+/* Shadow surface — light backdrop so shadows are visible */
+.dt-shadow-surface {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  padding: 3rem 2rem;
+  border-radius: 0.75rem;
+  background-color: #e0e7e3;
+}
+
+.dt-shadow-box {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+/* Border boxes — visible stroke on transparent fill */
+.dt-border-box {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.375rem;
+  border-style: solid;
+  border-color: #475a52;
+  background-color: transparent;
+}

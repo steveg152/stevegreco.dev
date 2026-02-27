@@ -1,59 +1,39 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Projects from '@/components/Sections/Projects.astro'
-import Certifications from '@/components/Sections/Certifications.astro'
 import BlogList from '@/components/Sections/BlogList.astro'
-import Experience from '@/components/Sections/Experience.astro'
-import { LinkButton } from '@components/ui/link-button'
-import { Download } from 'lucide-react'
 ---
 
 <Layout
-  title="Steve Greco - Senior Software Engineer"
-  description="I am a software engineer with 11+ years of experience specializing in front-end development, design systems and testing automation. Currently open to new opportunities and looking for my next challenge."
+  title="Steve Greco - Design Systems & AI"
+  description="Writing about Design Systems, AI, and the craft of building software."
 >
-  <div>
-    <div class="flex lg:w-full lg:flex-col lg:justify-between lg:pb-16">
-      <section class="mb-6">
-        <div class="flex justify-start items-center gap-4">
-          <div class="w-full lg:w-3/4">
-            <h1 class="flex text-3xl lg:text-6xl tracking-tight">
-              Stephen Greco
-            </h1>
-            <p class="mt-4 mb-8">
-              I am a software engineer with 12+ years of experience specializing
-              in front-end development, design systems and testing automation.
-            </p>
-          </div>
-        </div>
-
-        <LinkButton href="/Resume.pdf" target="_blank">
-          Download Resume <Download />
-        </LinkButton>
-      </section>
-    </div>
-    <div class="pt-4 lg:w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
-        <section
-          id="blog"
-          class="mb-8 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24 lg:col-span-3"
-        >
-          <BlogList />
-        </section>
-        <div
-          class="grid grid-cols-1 col-span-1 md:col-span-2 gap-6 scroll-mt-16 lg:scroll-mt-24"
-        >
-          <section id="experience" class="">
-            <Experience />
-          </section>
-          <section id="projects" class="">
-            <Projects />
-          </section>
-          <section id="certifications" class="">
-            <Certifications />
-          </section>
-        </div>
+  <div class="max-w-prose mx-auto px-4 py-8 md:py-16">
+    <section class="mb-12 md:mb-16">
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight">
+        Stephen Greco
+      </h1>
+      <p class="font-mono text-sm text-primary mt-2">Senior Software Engineer</p>
+      <p class="mt-4 text-lg text-muted-foreground leading-relaxed">
+        Building interfaces and design systems for over 12 years.
+        Writing about the intersection of Design Systems, AI, and front-end engineering.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground font-mono">
+        <span><span class="text-primary">&#9656;</span> Currently at Stratfield Consulting</span>
+        <span><span class="text-primary">&#9656;</span> Design Systems & AI</span>
       </div>
-    </div>
+    </section>
+
+    <section>
+      <div class="flex items-baseline justify-between mb-6">
+        <h2 class="text-xl font-semibold">Recent Writing</h2>
+        <a
+          href="/blog"
+          class="text-sm text-muted-foreground hover:text-primary transition-colors font-mono"
+        >
+          View all &rarr;
+        </a>
+      </div>
+      <BlogList />
+    </section>
   </div>
 </Layout>

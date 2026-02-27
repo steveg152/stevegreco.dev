@@ -2,15 +2,16 @@
 
 ---
 
-<!-- Mobile Navigation component using tailwind and a hamburger icon that expands when clicked -->
-<div class="" id="menu-container" class:list="">
+<div id="menu-container">
   <div
     id="menu-content"
-    class="w-full bg-background text-foreground p-5 hidden lg:hidden"
+    class="w-full bg-background text-foreground p-5 hidden lg:hidden border-b border-border"
   >
     <nav>
-      <ul>
+      <ul class="space-y-1">
         <li><a href="/" class="block py-2">Home</a></li>
+        <li><a href="/blog" class="block py-2">Writing</a></li>
+        <li><a href="/about" class="block py-2">About</a></li>
       </ul>
     </nav>
   </div>

@@ -4,7 +4,6 @@ tags: ['technology', 'software development', 'teamwork', 'leadership']
 date: 2024-03-11T12:00:00-05:00
 author: 'Stephen Greco'
 avatar: '/avatar.png'
-image: '@assets/images/tech-decisions.webp'
 ---
 
 In the fast-paced world of technology, the debate over the "best" framework or tech stack can quickly turn heated. With an 11-year journey in software development, leading teams and steering enterprise projects primarily in client-side applications, I've navigated these discussions firsthand. My aim here is to share personal insights, hoping to shed light on how to approach these decisions with clarity and confidence in 2024. Remember, these reflections stem from my experiences; they are subjective and may not apply universally.

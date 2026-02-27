@@ -203,39 +203,6 @@ import Layout from '@/layouts/Layout.astro'
       </div>
     </section>
 
-    <!-- Forest Green Palette -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Forest Green Palette</h2>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-2">
-        {
-          [
-            { name: '50', var: 'forest-50' },
-            { name: '100', var: 'forest-100' },
-            { name: '200', var: 'forest-200' },
-            { name: '300', var: 'forest-300' },
-            { name: '400', var: 'forest-400' },
-            { name: '500', var: 'forest-500' },
-            { name: '600', var: 'forest-600' },
-            { name: '700', var: 'forest-700' },
-            { name: '800', var: 'forest-800' },
-            { name: '900', var: 'forest-900' },
-            { name: '950', var: 'forest-950' },
-          ].map((color) => (
-            <div class="border rounded p-2">
-              <div
-                class="h-16 rounded mb-2"
-                style={`background-color: var(--${color.var})`}
-              />
-              <p class="font-mono text-xs">{color.name}</p>
-            </div>
-          ))
-        }
-      </div>
-      <p class="text-sm text-muted-foreground mt-3">
-        Warm, vibrant greens that create beautiful contrast with cool blue-smoke tones. Try <code class="bg-muted px-1.5 py-0.5 rounded text-xs">forest-600</code> or <code class="bg-muted px-1.5 py-0.5 rounded text-xs">forest-700</code> for primary.
-      </p>
-    </section>
-
     <!-- Blue Smoke Palette -->
     <section class="mb-12">
       <h2 class="text-2xl font-semibold mb-4">Blue Smoke Palette</h2>

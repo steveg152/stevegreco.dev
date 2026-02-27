@@ -4,7 +4,6 @@ tags: ['teamwork', 'leadership', 'mentorship', 'collaboration']
 date: 2024-03-08T12:00:00-05:00
 author: 'Stephen Greco'
 avatar: '/avatar.png'
-image: '@assets/images/collaborative-culture.webp'
 ---
 
 In my journey of over ten years in the development world, I've learned that the heart and soul of any successful team boil down to one word: collaboration. This isn't just a blog post; it's a casual chat about the insights I've gathered, the lessons I've learned, and the stories I've lived through as a team leader and mentor.

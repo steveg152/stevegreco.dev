@@ -19,18 +19,20 @@ const { title, description, image = '/SocialImage.png' } = Astro.props
 <meta name="generator" content={Astro.generator} />
 <!-- Theme Initialization -->
 <script is:inline>
-  ;(function () {
-    const theme =
+  function applyTheme() {
+    var theme =
       localStorage.getItem('theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'theme-light')
-    const isDark =
+    var isDark =
       theme === 'dark' ||
       (theme === 'system' &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
-  })()
+  }
+  applyTheme()
+  document.addEventListener('astro:after-swap', applyTheme)
 </script>
 
 <!-- Primary Meta Tags -->

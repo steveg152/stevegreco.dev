@@ -2,17 +2,18 @@
 import Link from '@/components/Base/Link.astro'
 ---
 
-<footer class="pt-8">
+<footer class="border-t border-border mt-16">
   <div
-    class="flex-col items-center text-center justify-center py-2 mt-2 mb-4 text-foreground text-sm"
+    class="flex flex-col items-center text-center justify-center py-6 text-sm text-muted-foreground gap-1"
   >
-    <p>
+    <p class="font-mono text-xs">
       Built with <Link external slug="https://astro.build/">Astro</Link>
-      and deployed on <Link external slug="https://vercel.com/">Vercel.</Link>
+       + <Link external slug="https://tailwindcss.com/">Tailwind</Link>
+       &middot; deployed on <Link external slug="https://vercel.com/">Vercel</Link>
     </p>
-    <p class="text-center text-sm">
+    <p>
       &copy; {new Date().getFullYear()}
-      <a href="https://www.stevegreco.dev">Stephen Greco</a>
+      <a href="https://www.stevegreco.dev" class="hover:text-primary transition-colors">Stephen Greco</a>
     </p>
   </div>
 </footer>
