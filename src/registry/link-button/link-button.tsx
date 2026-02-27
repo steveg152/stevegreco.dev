@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 
 function LinkButton() {
   return (
-    <Button asChild>
+    <Button>
       <a
         href="/Resume.pdf"
         target="_blank"

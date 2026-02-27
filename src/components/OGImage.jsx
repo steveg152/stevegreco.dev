@@ -1,9 +1,15 @@
 import satori from 'satori'
 import fs from 'node:fs/promises'
 
-const sourceCodeData = await fs.readFile(
-  './public/fonts/source_code_pro/SourceCodePro-Regular.ttf',
-)
+let sourceCodeData
+try {
+  sourceCodeData = await fs.readFile(
+    './public/fonts/source_code_pro/SourceCodePro-Regular.ttf',
+  )
+} catch (error) {
+  console.error('Failed to load font file:', error)
+  throw new Error('Font file not found for OG image generation')
+}
 
 export async function getOGImage(title) {
   const svg = await satori(

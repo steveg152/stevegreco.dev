@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets'
-import FormattedDate from '@components/FormattedDate.astro'
-import Prose from '@components/Prose.astro'
-import Layout from '../../layouts/Layout.astro'
+import FormattedDate from '@/components/FormattedDate.astro'
+import Prose from '@/components/Prose.astro'
+import Layout from '@/layouts/Layout.astro'
 
 import { getCollection } from 'astro:content'
-import { formatDate } from '../../utils'
+import { formatDate } from '@/lib/date'
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog')
   return blogEntries.map((entry) => ({

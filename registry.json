@@ -10,7 +10,7 @@
       "description": "A simple link button component.",
       "files": [
         {
-          "path": "./src/registry/link-button/link-button.tsx",
+          "path": "./src/components/ui/link-button.tsx",
           "type": "registry:component"
         }
       ]

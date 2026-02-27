@@ -11,13 +11,10 @@
     "disable-toolbar": "astro preferences disable devToolbar",
     "registry:build": "shadcn build"
   },
-  "imports": {
-    "#*": "./src/*"
-  },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^8.2.7",
+    "@astrojs/vercel": "^9.0.4",
     "@fontsource/inter": "^5.2.6",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-slot": "^1.2.3",
@@ -25,11 +22,12 @@
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "@vercel/analytics": "^1.5.0",
-    "astro": "^5.13.5",
+    "astro": "^5.18.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.486.0",
     "react": "^18.3.1",
+    "react-aria-components": "^1.12.2",
     "react-dom": "^18.3.1",
     "satori": "^0.10.14",
     "shadcn": "2.4.0-canary.20",
