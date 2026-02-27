@@ -35,15 +35,6 @@ const pathname = Astro.url.pathname
         >
           About
         </a>
-        <a
-          href="/contact"
-          class:list={[
-            'transition-colors hover:text-primary',
-            pathname === '/contact' || pathname === '/contact/' ? 'text-primary font-medium' : 'text-muted-foreground',
-          ]}
-        >
-          Contact
-        </a>
       </nav>
     </div>
 
